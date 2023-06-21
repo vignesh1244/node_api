@@ -16,7 +16,9 @@ app.get("/blog", (req, res) => {
 app.get("/blog", (req, res) => {
   res.send("Hello World this is blog ggggggg111hgeflkjadslfk");
 });
-
+app.get("/blog", (req, res) => {
+  res.send("Hello World this is blog ggggggg111hgeflkjadslfk");
+});
 app.get("/blog/v", (req, res) => {
   res.send("vvvvvvvvvvviiiiiiggggggnnnnnnneeeeeesssssshhhh");
 });
