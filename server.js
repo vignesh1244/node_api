@@ -23,7 +23,7 @@ app.get("/blog/v", (req, res) => {
   res.send("vvvvvvvvvvviiiiiiggggggnnnnnnneeeeeesssssshhhh");
 });
 
-//fetch product
+//fetch all product
 
 app.get("/products", async (req, res) => {
   try {
@@ -68,16 +68,19 @@ app.put("/products/:id", async (req, res) => {
   try {
     // return "allow";
     const { id } = req.params;
-    const product = await Product.findById(id, res.body);
+    console.log("hhhhhh", id, req?.params, req?.body);
+    const product = await Product.findByIdAndUpdate(id, req.body);
     res.status(200).json(product);
     if (!product) {
       return res
         .status(404)
-        .json({ message: "can find any product by id $id ${id}" });
+        .json({ message: `can find any product by id $id ${id}` });
+    } else {
+      res.status(200).json(product);
     }
   } catch (error) {
     console.log(error.message);
-    res.status(500).json({ message: error.message });
+    // res.status(500).json({ message: error.message });
   }
 });
 
