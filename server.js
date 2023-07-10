@@ -84,6 +84,8 @@ app.put("/products/:id", async (req, res) => {
   }
 });
 
+//this is in vi mail mongo db data base
+
 mongoose
   .connect(
     "mongodb+srv://master:1234567master@buildapi.9bwvbgd.mongodb.net/Node-API?retryWrites=true&w=majority"
