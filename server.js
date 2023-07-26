@@ -85,6 +85,8 @@ app.put("/products/:id", async (req, res) => {
 });
 
 //this is in vi mail mongo db data base
+//npm run serve
+//npm run dev
 
 mongoose
   .connect(
